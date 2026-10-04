@@ -69,6 +69,9 @@ _Capturas reales del entorno, con nombres, direcciones, usuarios y versiones ree
 ![Resumen del nodo con uptime y carga](docs/img/proxmox-nodo-resumen.png)
 <sub>El nodo: 12 dias de uptime, carga y memoria en tiempo real.</sub>
 
+![Almacenamiento efectivo](docs/img/grafana-storage.png)
+<sub>Almacenamiento por rol: 933 GB totales, uso por storage y tendencia, sin sorpresas de espacio.</sub>
+
 ## Problema, decision, resultado
 
 | Problema | Por que importaba | Que se hizo | Resultado |
