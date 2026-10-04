@@ -17,6 +17,7 @@ honestidad tecnica sobre los riesgos residuales que quedan abiertos.
 
 ## Indice
 
+- [Ficha rapida para quien evalua](contexto.md)
 - [Arquitectura de virtualizacion](docs/01-arquitectura-virtualizacion.md)
 - [Caso de estudio: migracion de storage y reboot controlado](docs/casos-de-estudio/01-migracion-storage-y-reboot-controlado.md)
 
