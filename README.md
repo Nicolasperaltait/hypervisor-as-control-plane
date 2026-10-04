@@ -7,10 +7,12 @@ capa de virtualizacion de una infraestructura productiva personal (homelab): un 
 control plane, la organizacion del storage de maquinas virtuales y un caso real
 de migracion de storage con reboot controlado.
 
-Es parte de un portfolio tecnico. **No es un laboratorio de prueba**: es una
-**infraestructura productiva personal**. Un hipervisor de tipo 1 sobre un
-servidor dedicado, encendido 24/7, del que dependen todos los dias la red de la
-casa, los backups, la seguridad y aplicaciones en uso real. Si se apaga, se nota.
+Es parte de un portfolio tecnico. **No es un laboratorio de prueba: es
+infraestructura productiva.** No tiene la escala de una empresa, pero tiene
+todas sus piezas -virtualizacion, red segmentada, DNS, almacenamiento, backups
+con copia externa, monitoreo, SIEM, acceso remoto y aplicaciones en uso- y
+funciona 24/7 sobre un hipervisor de tipo 1 en un servidor dedicado. Cuando
+algo falla, el impacto es real.
 
 La documentacion operativa es privada. Esto es su version transformada
 -decisiones, patrones y aprendizajes-, sin datos que permitan identificar o
@@ -21,20 +23,20 @@ infraestructura productiva critica, capacidad de ejecutar
 cambios sensibles (migraciones de storage, reboots) con evidencia y rollback, y
 honestidad tecnica sobre los riesgos residuales que quedan abiertos.
 
-## Por que es infraestructura productiva
+## Escala chica, exigencia de produccion
 
-| Servicio que corre 24/7 | Que pasa si se cae |
-|---|---|
-| DNS de toda la red de la casa | ningun equipo resuelve nombres: para quien la usa, "se corto internet" |
-| Backups nocturnos y copia cifrada fuera del sitio | se pierde la proteccion de los datos y nadie lo nota hasta necesitarla |
-| SIEM, metricas y alertas al telefono | los incidentes pasan sin que nadie se entere |
-| Acceso remoto por malla | no hay forma de operar desde fuera de casa |
-| NAS y espejo de la estacion de trabajo | se corta la sincronizacion de los archivos de trabajo |
-| Aplicaciones propias en uso diario | se frena el uso real, incluido el envio de correo |
-| Remoto de codigo propio | no hay donde versionar ni desde donde desplegar |
+| Pieza | Que hace | Si falla |
+|---|---|---|
+| Virtualizacion | hipervisor de tipo 1, una maquina por funcion | cae todo lo demas |
+| DNS interno | resolucion para todos los equipos y servicios | todo parece caido aunque este sano |
+| Red y acceso remoto | zonas por funcion, malla sin puertos abiertos | se pierde el aislamiento o el acceso desde afuera |
+| Almacenamiento y backups | NAS, backups nocturnos, copia cifrada externa, pruebas de restauracion | se pierde la capacidad de recuperar |
+| Monitoreo, SIEM y alertas | metricas, eventos de seguridad, avisos al telefono | los incidentes pasan sin que nadie se entere |
+| Aplicaciones propias | en uso diario; una envia correo real | se frena trabajo real |
+| Remoto de codigo | versionado y despliegue de esas aplicaciones | no hay donde versionar ni desde donde desplegar |
 
-Por eso cada cambio se trata como en produccion: plan, rollback, evidencia y
-verificacion de que lo que tiene que fallar, falla.
+Lo mismo que en una empresa, en chico: cambios con plan y rollback, evidencia,
+alertas que avisan solas y controles que se prueban haciendolos fallar.
 
 ## En 30 segundos
 
@@ -56,6 +58,16 @@ flowchart LR
     K -- si --> C[Retirar rollback,<br/>con confirmacion aparte]
     K -- no --> P
 ```
+
+## Problema, decision, resultado
+
+| Problema | Por que importaba | Que se hizo | Resultado |
+|---|---|---|---|
+| Habia que liberar storage sin romper automatizaciones, backups ni monitoreo | todo dependia de rutas y discos del hipervisor | migracion con ruta logica preservada y rollback | storage separado por rol, entorno operativo |
+| Un disco lleno no se vaciaba al borrar | snapshots olvidados retenian los bloques viejos | todo snapshot nace con fecha de retiro | causa eliminada |
+| La configuracion decia que todo arrancaba solo despues de un reboot | un reboot real lo desmintio para 2 maquinas | reboot real como prueba, confirmado por kernel y hora de arranque | riesgo documentado, no escondido |
+
+El detalle de cada uno, con lo que salio mal en el camino, esta en los casos de estudio.
 
 ## Indice
 
