@@ -3,11 +3,11 @@
 > Un hipervisor de tipo 1, encendido 24/7, operado como plataforma productiva: limites claros, evidencia y rollback.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Proxmox_VE-1F2937?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE" />
-  <img src="https://img.shields.io/badge/Tipo_1-111827?style=for-the-badge&logo=linux&logoColor=white" alt="Tipo 1" />
-  <img src="https://img.shields.io/badge/24%2F7-0F766E?style=for-the-badge" alt="24/7" />
-  <img src="https://img.shields.io/badge/Rollback-242424?style=for-the-badge" alt="Rollback" />
-  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
+  <img src="https://img.shields.io/badge/Proxmox_VE-2563EB?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE" />
+  <img src="https://img.shields.io/badge/Tipo_1-1F2937?style=for-the-badge&logo=linux&logoColor=white" alt="Tipo 1" />
+  <img src="https://img.shields.io/badge/24%2F7-059669?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0zIDNoMTh2Nkgzem0wIDhoMTh2Nkgzem0wIDhoMTh2Mkgzek02IDUuNWgydjFINnptMCA4aDJ2MUg2eiIvPjwvc3ZnPg%3D%3D&logoColor=white" alt="24/7" />
+  <img src="https://img.shields.io/badge/Rollback-7C3AED?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0zIDRoMTh2N0gzem0wIDloMTh2N0gzem0xNC02LjVhMS41IDEuNSAwIDEgMCAwIC4wMXptMCA5YTEuNSAxLjUgMCAxIDAgMCAuMDF6Ii8%2BPC9zdmc%2B&logoColor=white" alt="Rollback" />
+  <img src="https://img.shields.io/badge/Grafana-D97706?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
 </p>
 
 Este repositorio documenta, de forma sanitizada, el diseno y la operacion de la
