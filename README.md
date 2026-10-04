@@ -2,6 +2,14 @@
 
 > Un hipervisor de tipo 1, encendido 24/7, operado como plataforma productiva: limites claros, evidencia y rollback.
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Proxmox_VE-1F2937?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE" />
+  <img src="https://img.shields.io/badge/Tipo_1-111827?style=for-the-badge&logo=linux&logoColor=white" alt="Tipo 1" />
+  <img src="https://img.shields.io/badge/24%2F7-0F766E?style=for-the-badge" alt="24/7" />
+  <img src="https://img.shields.io/badge/Rollback-242424?style=for-the-badge" alt="Rollback" />
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
+</p>
+
 Este repositorio documenta, de forma sanitizada, el diseno y la operacion de la
 capa de virtualizacion de una infraestructura productiva personal (homelab): un hipervisor tratado como
 control plane, la organizacion del storage de maquinas virtuales y un caso real
