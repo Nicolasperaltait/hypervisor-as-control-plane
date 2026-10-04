@@ -9,12 +9,13 @@ virtuales sin modelo operativo. Este proyecto trata el hipervisor como una
 plataforma pequena de infraestructura, con limites claros, evidencia
 operativa y expectativas de recuperacion, operada por una sola persona.
 
-El problema de diseno es: como operar un hipervisor domestico realista sin
+El problema de diseno es: como operar un hipervisor de tipo 1 personal, productivo y 24/7, sin
 convertirlo en un entorno desordenado, sobreexpuesto o imposible de explicar.
 
 ## El hipervisor como control plane
 
-Todo el entorno se ancla en un unico hipervisor open-source. Esa decision
+Todo el entorno se ancla en un unico hipervisor open-source de tipo 1,
+instalado sobre un servidor dedicado que no se apaga. Esa decision
 tiene una consecuencia directa: el hipervisor deja de ser "solo computo" y
 pasa a concentrar tres funciones a la vez:
 

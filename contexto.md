@@ -4,7 +4,7 @@ Ficha de lectura rapida: que es, por que existe y que muestra.
 
 ## 1. Que es
 
-Diseno y operacion de la capa de virtualizacion de un homelab: un hipervisor tratado como control plane, zonas funcionales y storage de maquinas virtuales.
+Diseno y operacion de la capa de virtualizacion de una infraestructura productiva personal (homelab): un hipervisor tratado como control plane, zonas funcionales y storage de maquinas virtuales.
 
 ## 2. Por que existe
 
