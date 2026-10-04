@@ -59,6 +59,16 @@ flowchart LR
     K -- no --> P
 ```
 
+## En vivo
+
+_Capturas reales del entorno, con nombres, direcciones, usuarios y versiones reemplazados por su funcion._
+
+![Proxmox VE con nueve maquinas por funcion](docs/img/proxmox-datacenter.png)
+<sub>Nueve maquinas, una por funcion, y storage separado por rol.</sub>
+
+![Resumen del nodo con uptime y carga](docs/img/proxmox-nodo-resumen.png)
+<sub>El nodo: 12 dias de uptime, carga y memoria en tiempo real.</sub>
+
 ## Problema, decision, resultado
 
 | Problema | Por que importaba | Que se hizo | Resultado |
