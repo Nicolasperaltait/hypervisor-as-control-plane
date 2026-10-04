@@ -35,6 +35,17 @@ La migracion se trato como un cambio operacional controlado:
 - confirmar el reboot real con boot time y kernel activo, no solo con que la
   sesion remota se haya cortado
 
+## Que se verifico y como
+
+| Riesgo | Verificacion | Evidencia aceptada |
+|---|---|---|
+| Automatizaciones con rutas fijas | ruta logica preservada | el storage nuevo montado en la ruta esperada |
+| Dashboards mirando el disco viejo | consultas sobre el recurso correcto | metricas especificas, no un estado general |
+| Archivos "duplicados" que no lo eran | referencias y discos base revisados | ningun disco activo ni snapshot reteniendo el storage viejo |
+| DNS como punto unico | apagarlo a proposito | comportamiento con el DNS caido validado |
+| Reboot que no ocurrio | consultar el sistema despues | hora de arranque y version del kernel nuevas |
+| Autostart | reboot real | **dos maquinas no arrancaron**: quedo como riesgo abierto |
+
 ## Validacion
 
 El patron de validacion fue:

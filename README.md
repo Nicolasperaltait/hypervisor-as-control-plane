@@ -17,6 +17,27 @@ domestico como una pieza critica de infraestructura, capacidad de ejecutar
 cambios sensibles (migraciones de storage, reboots) con evidencia y rollback, y
 honestidad tecnica sobre los riesgos residuales que quedan abiertos.
 
+## En 30 segundos
+
+| Indicador | Resultado |
+|---|---|
+| Migracion de storage | entorno operativo al cierre, con rollback conservado hasta la validacion funcional |
+| Discos llenos causados por snapshots olvidados | **2**: desde entonces todo snapshot nace con fecha de retiro |
+| Reboot del hipervisor | confirmado por hora de arranque y kernel activo, no por un corte de SSH |
+| Maquinas que no arrancaron solas tras un reboot real | **2**, aunque la configuracion decia que si |
+| Prueba con el DNS primario apagado | ejecutada a proposito, antes de necesitarla |
+
+```mermaid
+flowchart LR
+    P[Preparar rollback] --> M[Migrar preservando la ruta logica]
+    M --> V[Validar metricas, servicios y automatizaciones]
+    V --> D[Prueba con DNS caido]
+    D --> R[Reboot real del hipervisor]
+    R --> K{Kernel y hora de<br/>arranque nuevos?}
+    K -- si --> C[Retirar rollback,<br/>con confirmacion aparte]
+    K -- no --> P
+```
+
 ## Indice
 
 - [Ficha rapida para quien evalua](contexto.md)
