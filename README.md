@@ -1,4 +1,6 @@
-# Homelab - Virtualizacion y Plataforma
+# Hypervisor as Control Plane
+
+> Un hipervisor domestico operado como plataforma: limites claros, evidencia y rollback.
 
 Este repositorio documenta, de forma sanitizada, el diseno y la operacion de la
 capa de virtualizacion de un homelab personal: un hipervisor tratado como
@@ -20,6 +22,18 @@ honestidad tecnica sobre los riesgos residuales que quedan abiertos.
 - [Ficha rapida para quien evalua](contexto.md)
 - [Arquitectura de virtualizacion](docs/01-arquitectura-virtualizacion.md)
 - [Caso de estudio: migracion de storage y reboot controlado](docs/casos-de-estudio/01-migracion-storage-y-reboot-controlado.md)
+
+## Parte de una serie
+
+Este repo es una pieza de un proyecto mas grande: un **homelab personal**
+operado como infraestructura real y documentado en cinco repos
+independientes. Cada uno se lee solo; juntos muestran el entorno completo.
+
+- [Zero Trust Remote Access](https://github.com/Nicolasperaltait/zero-trust-remote-access)
+- [Backups That Don't Lie](https://github.com/Nicolasperaltait/backups-that-dont-lie)
+- [Alerts That Matter](https://github.com/Nicolasperaltait/alerts-that-matter)
+- [Network Segmentation Playbook](https://github.com/Nicolasperaltait/network-segmentation-playbook)
+- [Hypervisor as Control Plane](https://github.com/Nicolasperaltait/hypervisor-as-control-plane) (este repo)
 
 ## Licencia
 

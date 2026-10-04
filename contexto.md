@@ -1,4 +1,4 @@
-# Contexto - homelab-virtualizacion
+# Contexto - hypervisor-as-control-plane
 
 Ficha de lectura rapida: que es, por que existe y que muestra.
 
